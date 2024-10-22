@@ -1,5 +1,3 @@
-// src/components/Footer/Footer.tsx
-
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -36,6 +34,7 @@ export default function Footer() {
       
       <div className={styles.footerBottom}>
         <p>© 2024 Text to Speech. Created with ❤️ by <a href="https://beksh.uz" target="_blank" rel="noopener noreferrer">Bek Shoyatbek</a></p>
+        <p>Powered by <a href="https://play.ht" target="_blank" rel="noopener noreferrer">Play.ht</a></p>
       </div>
     </footer>
   );
