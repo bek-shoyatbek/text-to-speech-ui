@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Text to Speech Converter (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, user-friendly text-to-speech converter built with React, TypeScript, and Vite. Convert text to natural-sounding speech with multiple voice options and customization features.
 
-Currently, two official plugins are available:
+![Text to Speech Screenshot](./public/thumbnail.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✨ Modern, responsive UI
+- 🎯 Multiple voice options
+- ⚡ Real-time voice preview
+- 🎛️ Adjustable speech speed and quality
+- 💾 Download converted audio
+- ⌨️ Keyboard shortcuts support
+- 🌓 Dark mode support
+- 🌐 Cross-browser compatibility
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React 18
+- TypeScript
+- Vite
+- CSS Modules
+- Font Awesome
+- React Helmet (SEO)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/bek-shoyatbek/text-to-speech-ui.git
+cd text-to-speech-ui
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+## 🔧 Configuration
+
+### API Configuration
+
+Update the API endpoint in `src/api/index.ts`:
+```typescript
+export const API_URL =  your_api_url;
+```
+
+## 📖 Usage
+
+1. Enter or paste your text in the text area
+2. Select a voice from the available options
+3. Adjust speed and quality settings if needed
+4. Click "Convert to Speech" or use Ctrl/Cmd + Enter
+5. Play the converted audio or download it
+
+### Keyboard Shortcuts
+
+- `Ctrl/Cmd + Enter`: Convert text to speech
+- `Space`: Play/pause audio (when audio player is focused)
+
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 👥 Authors
+
+- Bek Shoyatbek - [GitHub](https://github.com/bek-shoyatbek)
+- LinkedIn - [Bek Shoyatbek](https://www.linkedin.com/in/bek-shoyatbek/)
+- Twitter - [Bek Shoyatbek](https://twitter.com/bek-shoyatbekov)
