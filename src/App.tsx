@@ -4,9 +4,14 @@ import TextToSpeech from './components/TextToSpeech/TextToSpeech';
 import Footer from './components/Footer/Footer';
 import './App.css';
 import { Analytics } from "@vercel/analytics/react"
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from './components/SEO/SEO';
+
 
 function App() {
   return (
+    <HelmetProvider>
+      <SEO />
     <div className="app">
       <Analytics />
       <Header />
@@ -22,6 +27,7 @@ function App() {
       </main>
       <Footer />
     </div>
+    </HelmetProvider>
   );
 }
 
