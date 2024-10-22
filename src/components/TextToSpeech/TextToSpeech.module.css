@@ -1,0 +1,150 @@
+/* src/components/TextToSpeech.module.css */
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .title {
+    color: #2d3748;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #4299e1;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+  }
+  
+  .textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    line-height: 1.5;
+  }
+  
+  .textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .button {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .button:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+  
+  .button:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  .button:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+  }
+  
+  .button i {
+    font-size: 1.2rem;
+  }
+  
+  .convertButton {
+    background: #4299e1;
+  }
+  
+  .convertButton:hover:not(:disabled) {
+    background: #3182ce;
+  }
+  
+  .downloadButton {
+    background: #48bb78;
+  }
+  
+  .downloadButton:hover:not(:disabled) {
+    background: #38a169;
+  }
+  
+  .loading {
+    color: #4a5568;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .error {
+    color: #e53e3e;
+    text-align: center;
+    background: #fff5f5;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #feb2b2;
+  }
+  
+  .audioContainer {
+    width: 100%;
+  }
+  
+  .audio {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .textarea {
+      min-height: 120px;
+    }
+  
+    .button {
+      padding: 0.75rem 1.5rem;
+      min-width: 100%;
+    }
+  }
