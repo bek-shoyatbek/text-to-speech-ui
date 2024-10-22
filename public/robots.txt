@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://free-text-to-speech.vercel.app/sitemap.xml
+
+# Prevent crawling of admin pages
+Disallow: /admin/
+Disallow: /private/
+
+# Prevent crawling of search results
+Disallow: /search?
+
+# Allow crawling of static assets
+Allow: /static/
+Allow: /images/
+Allow: /css/
+Allow: /js/
