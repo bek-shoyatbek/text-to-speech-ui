@@ -1,21 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import compression from 'vite-plugin-compression';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    compression(),
-  ],
+  plugins: [react()],
   build: {
     minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          features: ['./src/components/Features'],
-        },
-      },
-    },
+          vendor: ['react', 'react-dom', 'react-helmet-async']
+        }
+      }
+    }
   },
+  server: {
+    port: 3000,
+    host: true
+  }
 });
