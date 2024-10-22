@@ -3,10 +3,12 @@ import Features from './components/Features/Features';
 import TextToSpeech from './components/TextToSpeech/TextToSpeech';
 import Footer from './components/Footer/Footer';
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <div className="app">
+      <Analytics />
       <Header />
       <main className="main">
         <section className="hero">
